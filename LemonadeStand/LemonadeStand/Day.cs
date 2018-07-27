@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Inventory
+    class Day
     {
         // memeber variables (HAS A)
 
-        public Inventory()
+        public Day()
         {
 
         }

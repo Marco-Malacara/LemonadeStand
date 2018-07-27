@@ -8,5 +8,13 @@ namespace LemonadeStand
 {
     class Customer
     {
+        // memeber variables (HAS A)
+
+        public Customer()
+        {
+
+        }
+
+        // member methods (CAN DO)
     }
 }

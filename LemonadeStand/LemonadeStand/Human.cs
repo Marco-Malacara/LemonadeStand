@@ -8,5 +8,14 @@ namespace LemonadeStand
 {
     class Human : Player
     {
+        // memeber variables (HAS A)
+        // gained through inharentence
+
+        public Human()
+        {
+
+        }
+
+        // member methods (CAN DO)
     }
 }

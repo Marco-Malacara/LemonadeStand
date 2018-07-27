@@ -8,5 +8,14 @@ namespace LemonadeStand
 {
     class Store
     {
+        // memeber variables (HAS A)
+        // 
+
+        public Store()
+        {
+
+        }
+
+        // member methods (CAN DO)
     }
 }

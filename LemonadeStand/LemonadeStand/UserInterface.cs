@@ -8,5 +8,13 @@ namespace LemonadeStand
 {
     class UserInterface
     {
+        // memeber variables (HAS A)
+
+        public UserInterface()
+        {
+
+        }
+
+        // member methods (CAN DO)
     }
 }

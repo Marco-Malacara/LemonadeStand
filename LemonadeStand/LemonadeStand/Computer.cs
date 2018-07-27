@@ -8,5 +8,14 @@ namespace LemonadeStand
 {
     class Computer : Player
     {
+        // memeber variables (HAS A)
+        // gained through inharentance
+
+        public Computer()
+        {
+
+        }
+
+        // member methods (CAN DO)
     }
 }
