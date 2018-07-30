@@ -17,5 +17,12 @@ namespace LemonadeStand
         }
 
         // member methods (CAN DO)
+        protected override void GetPlayerName()
+        {
+            Console.WriteLine("Please enter your name.");
+            name = Console.ReadLine();
+        }
+
+
     }
 }

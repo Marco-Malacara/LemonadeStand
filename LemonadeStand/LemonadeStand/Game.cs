@@ -12,12 +12,20 @@ namespace LemonadeStand
         // Has a menu
         // Has players
         // Has a set of rules
+        // number of days
+        Store store;
+        public List<string> items;
 
         public Game()
         {
-
+            store = new Store();
+            items = new List<string>() { "Lemons", "Cups", "Sugar", "Ice" };
         }
 
         // member methods (CAN DO)
+        public void RunStore()
+        {
+            store.BuyItems(items);
+        }
     }
 }

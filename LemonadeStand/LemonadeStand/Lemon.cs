@@ -6,16 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class UserInterface
+    class Lemon : Store
     {
-        // memeber variables (HAS A)
-
-
-        public UserInterface()
-        {
-
-        }
-
-        // member methods (CAN DO)
     }
 }

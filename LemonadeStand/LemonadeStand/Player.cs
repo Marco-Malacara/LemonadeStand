@@ -6,18 +6,43 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Player
+    abstract class Player
     {
         // memeber variables (HAS A)
         // Has a name
-        // Has a Score
-        // Has a Inventory
+        // Has a money
+        protected string name;
+        protected double availabeMoney;
+        protected double spendMoney;
 
         public Player()
+        {
+            name = "Jarvis";
+            availabeMoney = 0;
+        }
+
+        // member methods (CAN DO)
+        // can get name
+        // can track money
+        protected virtual void GetPlayerName()
         {
 
         }
 
-        // member methods (CAN DO)
+        protected void TotalMoney()
+        {
+            Console.WriteLine("You currently have $" + availabeMoney);
+        }
+
+        protected void AddMoney()
+        {
+
+        }
+
+        protected void SubtractMoney()
+        {
+            spendMoney = (availabeMoney - spendMoney);
+            TotalMoney();
+        }
     }
 }
