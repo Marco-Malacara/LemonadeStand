@@ -13,19 +13,20 @@ namespace LemonadeStand
         // Has players
         // Has a set of rules
         // number of days
-        Player playerOne;
+        private Player player;
+        private Store store;
+        private Day day;
         
 
         public Game()
         {
-            playerOne = new Player();
+            player = new Player();
         }
 
         // member methods (CAN DO)
         public void RunGame()
         {
-            playerOne.ChooseItem(playerOne.items);
-            playerOne.inventory.DisplayInventory();
+            
         }
     }
 }

@@ -6,14 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-   abstract class Store
+    class Cash
     {
-        public Store()
-        {
-            
-        }
-
-        // member methods (CAN DO)
-        
     }
 }
