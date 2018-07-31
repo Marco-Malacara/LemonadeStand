@@ -11,7 +11,8 @@ namespace LemonadeStand
         static void Main(string[] args)
         {
             Game LemonadeStand = new Game();
-            LemonadeStand.RunStore();
+            LemonadeStand.RunGame();
+            Console.ReadLine();
         }
     }
 }

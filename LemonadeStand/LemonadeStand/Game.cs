@@ -13,19 +13,19 @@ namespace LemonadeStand
         // Has players
         // Has a set of rules
         // number of days
-        Store store;
-        public List<string> items;
+        Player playerOne;
+        
 
         public Game()
         {
-            store = new Store();
-            items = new List<string>() { "Lemons", "Cups", "Sugar", "Ice" };
+            playerOne = new Player();
         }
 
         // member methods (CAN DO)
-        public void RunStore()
+        public void RunGame()
         {
-            store.BuyItems(items);
+            playerOne.ChooseItem(playerOne.items);
+            playerOne.inventory.DisplayInventory();
         }
     }
 }

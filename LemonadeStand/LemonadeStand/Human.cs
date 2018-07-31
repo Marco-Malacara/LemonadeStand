@@ -22,7 +22,5 @@ namespace LemonadeStand
             Console.WriteLine("Please enter your name.");
             name = Console.ReadLine();
         }
-
-
     }
 }
