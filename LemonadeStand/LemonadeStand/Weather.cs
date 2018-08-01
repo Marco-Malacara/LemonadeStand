@@ -10,7 +10,7 @@ namespace LemonadeStand
     {
         private List<string> conditionOfWeather;
         private List<int> tempatureOfDay;
-        public string conditions;
+        public string condition;
         public int tempature;
         Random random = new Random();
 
@@ -23,7 +23,13 @@ namespace LemonadeStand
         public void TodaysTemperature()
         {
             int todaysTemperature = random.Next(0, tempatureOfDay.Count);
-            Console.WriteLine(tempature = tempatureOfDay[todaysTemperature]);
+            tempature = tempatureOfDay[todaysTemperature];
+        }
+
+        public void TodaysCondition()
+        {
+            int todaysCondition = random.Next(0, conditionOfWeather.Count);
+            condition = conditionOfWeather[todaysCondition];
         }
     }
 }
