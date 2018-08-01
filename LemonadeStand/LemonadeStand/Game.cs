@@ -22,14 +22,13 @@ namespace LemonadeStand
         {
             player = new Player();
             store = new Store();
+            day = new Day();
         }
 
         // member methods (CAN DO)
         public void RunGame()
         {
-            store.Restock(player);
-            Console.ReadLine();
-            Console.Clear();
+            
         }
     }
 }
