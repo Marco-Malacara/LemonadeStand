@@ -14,7 +14,7 @@ namespace LemonadeStand
             //LemonadeStand.RunGame();
 
             Weather weather = new Weather();
-            weather.TodaysTemperature();
+            weather.DisplayTodaysWeather();
             Console.ReadLine();
 
         }
