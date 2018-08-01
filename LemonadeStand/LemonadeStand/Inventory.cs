@@ -19,9 +19,9 @@ namespace LemonadeStand
         }
 
         // member methods (CAN DO)
-        public void AddLemons(int numberOfLemonsNeeded)
+        public void AddLemons(int AmountOfLemonsNeeded)
         {
-            for(int i = 0; i < numberOfLemonsNeeded; i++)
+            for(int i = 0; i < AmountOfLemonsNeeded; i++)
             {
                 Lemon lemon = new Lemon();
                 lemons.Add(lemon);

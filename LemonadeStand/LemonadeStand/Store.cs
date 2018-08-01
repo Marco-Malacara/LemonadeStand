@@ -8,6 +8,10 @@ namespace LemonadeStand
 {
    abstract class Store
     {
+        int buyCups;
+        int buyLemons;
+        int BuySugar;
+        int BuyIce;
         public Store()
         {
             
