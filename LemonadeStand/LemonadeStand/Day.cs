@@ -17,11 +17,5 @@ namespace LemonadeStand
         }
 
         // member methods (CAN DO)
-        private void GetTodaysWeather()
-        {
-            todaysWeather.GetTempature();
-            todaysWeather.GetWeatherConditions();
-            Console.WriteLine("Today's weather is " + todaysWeather.tempature + "° and " + todaysWeather.todaysConditions);
-        }
     }
 }
