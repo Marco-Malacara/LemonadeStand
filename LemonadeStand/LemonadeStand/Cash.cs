@@ -8,5 +8,11 @@ namespace LemonadeStand
 {
     class Cash
     {
+        public double moneyAvailable;
+
+        public Cash()
+        {
+            moneyAvailable = 15.00;
+        }
     }
 }

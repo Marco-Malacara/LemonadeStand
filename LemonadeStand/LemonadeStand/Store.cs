@@ -48,5 +48,10 @@ namespace LemonadeStand
             buyLemons = lemon.GetCost() * lemonsNeeded;
             return buyLemons;
         }
+
+        public void PayForLemons(Player player)
+        {
+
+        }
     }
 }
