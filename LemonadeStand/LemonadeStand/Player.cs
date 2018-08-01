@@ -8,7 +8,7 @@ namespace LemonadeStand
 {
     class Player
     {
-        private Inventory inventory;
+        public Inventory inventory;
         private Cash cash;
 
     public Player()

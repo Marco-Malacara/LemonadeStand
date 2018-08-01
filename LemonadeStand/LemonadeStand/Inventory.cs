@@ -9,21 +9,25 @@ namespace LemonadeStand
     class Inventory
     {
         // memeber variables (HAS A)
-        // has items
-        // has item counter
-        public Lemon lemon;
+        List<Lemon> lemons;
+        
 
 
         public Inventory()
         {
-           lemon = new Lemon();
+            lemons = new List<Lemon>();
         }
 
         // member methods (CAN DO)
-       
-        public void DisplayInventory()
+        public void AddLemons(int numberOfLemonsNeeded)
         {
-            Console.WriteLine("You have " + lemon.amount + " lemon(s).");
+            for(int i = 0; i < numberOfLemonsNeeded; i++)
+            {
+                Lemon lemon = new Lemon();
+                lemons.Add(lemon);
+            }
+            Console.WriteLine("You currently have {0} lemons.", lemons.Count);
+            Console.ReadLine();
         }
     }
 }
