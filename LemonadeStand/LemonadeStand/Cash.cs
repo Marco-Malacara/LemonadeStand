@@ -9,6 +9,7 @@ namespace LemonadeStand
     class Cash
     {
         public double moneyAvailable;
+        double purchaseItem;
         Store store = new Store();
 
         public Cash()
@@ -24,6 +25,12 @@ namespace LemonadeStand
             }
         }
 
-
+        public double BuyItem()
+        {
+            purchaseItem = moneyAvailable - store.costOfProduct;
+            Console.WriteLine("Your purchase was succesful sending the items to your inventory now!");
+            moneyAvailable = purchaseItem;
+            return moneyAvailable;
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace LemonadeStand
     class Player
     {
         public Inventory inventory;
-        private Cash cash;
+        public Cash cash;
 
     public Player()
         {

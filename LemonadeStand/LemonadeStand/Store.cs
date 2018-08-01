@@ -52,7 +52,7 @@ namespace LemonadeStand
 
         public void PayForLemons(Player player)
         {
-
+            if(player.)
         }
     }
 }
