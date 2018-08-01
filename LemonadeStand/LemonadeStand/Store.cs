@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-   abstract class Store
+   class Store
     {
+        public double costOfProduct;
         double buyCups;
         double buyLemons;
         double BuySugar;
@@ -46,7 +47,7 @@ namespace LemonadeStand
         public double PurchasedLemons(double lemonsNeeded)
         {
             buyLemons = lemon.GetCost() * lemonsNeeded;
-            return buyLemons;
+            return costOfProduct;
         }
 
         public void PayForLemons(Player player)
