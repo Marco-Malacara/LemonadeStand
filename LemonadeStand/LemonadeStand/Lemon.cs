@@ -8,13 +8,16 @@ namespace LemonadeStand
 {
     class Lemon
     {
-        public double costOfLemons;
-        public int amount;
+        private double costOfLemons;
 
         public Lemon()
         {
             costOfLemons = .15;
-            amount = 0;
+        }
+
+        public double GetCost()
+        {
+            return costOfLemons;
         }
     }
 }
