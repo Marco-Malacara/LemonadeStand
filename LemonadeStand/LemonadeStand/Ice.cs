@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Human : Player
+    class Ice
     {
-        // memeber variables (HAS A)
-        // gained through inharentence
+        private double costOfIce;
 
-        public Human()
+        public Ice()
         {
-
+            costOfIce = .10;
         }
 
-        // member methods (CAN DO)
+        public double GetCost()
+        {
+            return costOfIce;
+        }
     }
 }

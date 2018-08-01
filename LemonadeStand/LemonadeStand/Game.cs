@@ -21,12 +21,15 @@ namespace LemonadeStand
         public Game()
         {
             player = new Player();
+            store = new Store();
         }
 
         // member methods (CAN DO)
         public void RunGame()
         {
-            
+            store.Restock(player);
+            Console.ReadLine();
+            Console.Clear();
         }
     }
 }
