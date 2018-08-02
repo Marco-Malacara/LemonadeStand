@@ -64,8 +64,16 @@ namespace LemonadeStand
                 Ice ice = new Ice();
                 this.ice.Add(ice);
             }
-            Console.WriteLine("You currently have {0} cups.", cups.Count);
+            Console.WriteLine("You currently have {0} cups.", ice.Count);
             Console.ReadLine();
+        }
+
+        public void DisplayCurrentInventory()
+        {
+            Console.WriteLine("You currently have {0} lemons.", lemons.Count);
+            Console.WriteLine("You currently have {0} cups of sugar.", sugar.Count);
+            Console.WriteLine("You currently have {0} cups.", cups.Count);
+            Console.WriteLine("You currently have {0} ice cubes.", ice.Count);
         }
     }
 }

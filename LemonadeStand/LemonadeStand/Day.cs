@@ -9,13 +9,13 @@ namespace LemonadeStand
     class Day
     {
         // memeber variables (HAS A)
-        Weather todaysWeather;
+        public Weather weather;
 
         public Day()
         {
-            todaysWeather = new Weather();
+            weather = new Weather();
         }
 
-        // member methods (CAN DO)
+        
     }
 }

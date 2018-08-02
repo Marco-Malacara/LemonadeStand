@@ -25,10 +25,63 @@ namespace LemonadeStand
             day = new Day();
         }
 
-        // member methods (CAN DO)
         public void RunGame()
         {
             
         }
+
+        public void MakeWeather()
+        {
+            day.weather.GenerateTodaysWeather();
+        }
+
+        public void MainMenu()
+        {
+            Console.WriteLine("Please choose from one of the option below!");
+            Console.WriteLine("1: Rules");
+            Console.WriteLine("2: Weather");
+            Console.WriteLine("3: Check available money");
+            Console.WriteLine("4: Head to store!");
+            Console.WriteLine("5: Check inventory!");
+            Console.WriteLine("6: Check recipe and make Lemonade!");
+            Console.WriteLine("7: Set Price and play game!");
+
+            string userInput = Console.ReadLine();
+            switch (userInput)
+            {
+                case "1":
+                    Console.Clear();
+                    UserInterFace.DisplayRules();
+                    break;
+                case "2":
+                    Console.Clear();
+                    day.weather.DisplayTodaysWeather();
+                    day.weather.GenerateForcast();
+                    Console.WriteLine("Press [enter] to return to main menu.");
+                    Console.ReadLine();
+                    Console.Clear();
+                    MainMenu();
+                    break;
+                case "3":
+                    Console.Clear();
+                    player.cash.DisplayCash();
+                    Console.WriteLine("Press [enter] to return to main menu.");
+                    Console.ReadLine();
+                    MainMenu();
+                    break;
+                case "4":
+                    Console.Clear();
+                    store.Restock(player);
+                    Console.WriteLine("Press [enter] to return to main menu.");
+                    Console.ReadLine();
+                    Console.Clear();
+                    MainMenu();
+                    break;
+                case "5":
+                    Console.Clear();
+                    player.inventory.DisplayCurrentInventory();
+            }
+        }
+        
     }
 }

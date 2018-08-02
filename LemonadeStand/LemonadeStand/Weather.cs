@@ -47,5 +47,10 @@ namespace LemonadeStand
         {
             Console.WriteLine("Today's weather is: {0} {1}", tempature, condition);
         }
+
+        public void ForecastTempature()
+        {
+            int todaysTempature = 
+        }
     }
 }
