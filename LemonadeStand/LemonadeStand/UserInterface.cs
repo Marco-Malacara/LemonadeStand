@@ -8,7 +8,8 @@ namespace LemonadeStand
 {
     static class UserInterFace
     {
-        static void DisplayWelcomeMessage()
+
+        public static void DisplayWelcomeMessage()
         {
             Day day = new Day();
             Game game = new Game();
@@ -21,6 +22,16 @@ namespace LemonadeStand
             Console.Clear();
             game.MakeWeather();
             game.MainMenu();
+        }
+
+        public static void DisplayRules()
+        {
+            Console.WriteLine("Alright buckle up cause here are the rules!");
+            Console.WriteLine("You start with $15.00!");
+            Console.WriteLine("Your goal is to make the greatest lemonade known to man!");
+            Console.WriteLine("Manage your inventory wisley make sure you have enough items to make your lemonade!");
+            Console.WriteLine("The amount of cups sold each day is based on the weather conditions and the price of your lemonade!");
+            Console.WriteLine("You're goal is to make more then what you started with ($15.00) good luck and have fun!");
         }
     }
 }

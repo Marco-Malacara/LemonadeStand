@@ -6,19 +6,20 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-   class Store
+    class Store
     {
         double buyCups;
         double buyLemons;
         double buySugar;
         double buyIce;
-        Lemon lemon = new Lemon();
-        Sugar sugar = new Sugar();
-        Cup cups = new Cup();
-        Ice ice = new Ice();
+        double lemonCost = .15;
+        double sugarCost = .30;
+        double cupCost = .30;
+        double iceCost = .10;
+
         public Store()
         {
-            
+
         }
 
         // member methods (CAN DO)
@@ -34,37 +35,37 @@ namespace LemonadeStand
             {
                 case "1":
                     GetLemons(player);
-                        break;
+                    break;
 
                 case "2":
                     GetSugar(player);
-                        break;
+                    break;
 
                 case "3":
                     GetCups(player);
-                        break;
+                    break;
 
                 case "4":
                     GetIce(player);
-                        break;
+                    break;
                 default:
                     Console.WriteLine("Sorry that input was invalid please try again!");
                     Restock(player);
                     break;
             }
         }
-        public double AmountOfLemonsNeeded(Player player)
+        public int AmountOfLemonsNeeded(Player player)
         {
             Console.WriteLine("Lemons are $0.15 each.");
             Console.WriteLine("How many Lemons would you like to buy?");
 
-            double lemonsNeeded = double.Parse(Console.ReadLine());
+            int lemonsNeeded = int.Parse(Console.ReadLine());
             return lemonsNeeded;
         }
 
-        public double PurchasedLemons(double lemonsNeeded)
+        public double PurchasedLemons(int lemonsNeeded)
         {
-            buyLemons = lemon.GetCost() * lemonsNeeded;
+            buyLemons = lemonCost * lemonsNeeded;
             return buyLemons;
         }
 
@@ -82,27 +83,25 @@ namespace LemonadeStand
 
         public void GetLemons(Player player)
         {
-            double numberOfLemons = AmountOfLemonsNeeded(player);
+            int numberOfLemons = AmountOfLemonsNeeded(player);
             PurchasedLemons(numberOfLemons);
             PayForLemons(player);
             player.inventory.AddLemons(numberOfLemons);
-            Cash cash = new Cash();
-            cash.DisplayCash();
-            Restock(player);
+            return;
         }
 
-        public double AmountOfSugarNeeded(Player player)
+        public int AmountOfSugarNeeded(Player player)
         {
             Console.WriteLine("Sugar is $0.30 a cup.");
             Console.WriteLine("How many cups of sugar would you like to buy?");
 
-            double cupsNeeded = double.Parse(Console.ReadLine());
+            int cupsNeeded = int.Parse(Console.ReadLine());
             return cupsNeeded;
         }
 
-        public double PurchasedSugar(double cupsNeeded)
+        public double PurchasedSugar(int cupsNeeded)
         {
-            buySugar = sugar.GetCost() * cupsNeeded;
+            buySugar = sugarCost * cupsNeeded;
             return buySugar;
         }
 
@@ -120,25 +119,25 @@ namespace LemonadeStand
 
         public void GetSugar(Player player)
         {
-            double numberOfSugar = AmountOfSugarNeeded(player);
+            int numberOfSugar = AmountOfSugarNeeded(player);
             PurchasedSugar(numberOfSugar);
             PayForSugar(player);
             player.inventory.AddSugar(numberOfSugar);
-            Restock(player);
+            return;
         }
 
-        public double AmountOfCupsNeeded(Player player)
+        public int AmountOfCupsNeeded(Player player)
         {
             Console.WriteLine("Cups are $0.35 each.");
             Console.WriteLine("How many cups would you like to buy?");
 
-            double drinkCupsNeeded = double.Parse(Console.ReadLine());
+            int drinkCupsNeeded = int.Parse(Console.ReadLine());
             return drinkCupsNeeded;
         }
 
-        public double PurchasedCups(double cupsNeeded)
+        public double PurchasedCups(int cupsNeeded)
         {
-            buyCups = cups.GetCost() * cupsNeeded;
+            buyCups = cupCost * cupsNeeded;
             return buyCups;
         }
 
@@ -156,25 +155,25 @@ namespace LemonadeStand
 
         public void GetCups(Player player)
         {
-            double numberOfCups = AmountOfCupsNeeded(player);
+            int numberOfCups = AmountOfCupsNeeded(player);
             PurchasedCups(numberOfCups);
             PayForCups(player);
             player.inventory.AddCups(numberOfCups);
-            Restock(player);
+            return;
         }
 
-        public double AmountOfIceNeeded(Player player)
+        public int AmountOfIceNeeded(Player player)
         {
             Console.WriteLine("Ice is $0.10 each.");
             Console.WriteLine("How much ice would you like to buy?");
 
-            double iceNeeded = double.Parse(Console.ReadLine());
+            int iceNeeded = int.Parse(Console.ReadLine());
             return iceNeeded;
         }
 
-        public double PurchasedIce(double iceNeeded)
+        public double PurchasedIce(int iceNeeded)
         {
-            buyIce = ice.GetCost() * iceNeeded;
+            buyIce = iceCost * iceNeeded;
             return buyCups;
         }
 
@@ -192,11 +191,11 @@ namespace LemonadeStand
 
         public void GetIce(Player player)
         {
-            double amountOfIce = AmountOfIceNeeded(player);
+            int amountOfIce = AmountOfIceNeeded(player);
             PurchasedIce(amountOfIce);
             PayForIce(player);
             player.inventory.AddIce(amountOfIce);
-            Restock(player);
+            return;
         }
     }
 }

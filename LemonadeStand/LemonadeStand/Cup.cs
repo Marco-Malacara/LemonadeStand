@@ -8,16 +8,6 @@ namespace LemonadeStand
 {
     class Cup
     {
-        private double costOfCups;
-
-        public Cup()
-        {
-            costOfCups = .30;
-        }
-
-        public double GetCost()
-        {
-            return costOfCups;
-        }
+        
     }
 }

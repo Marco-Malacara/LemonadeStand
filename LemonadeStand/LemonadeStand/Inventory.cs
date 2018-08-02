@@ -9,66 +9,58 @@ namespace LemonadeStand
     class Inventory
     {
         // memeber variables (HAS A)
-        List<Lemon> lemons;
-        List<Sugar> sugar;
-        List<Cup> cups;
-        List<Ice> ice;
-
+        List<Lemon> lemons = new List<Lemon>();
+        List<Sugar> sugar = new List<Sugar>();
+        List<Cup> cups = new List<Cup>();
+        List<Ice> ice = new List<Ice>();
 
         public Inventory()
         {
-            lemons = new List<Lemon>();
-            sugar = new List<Sugar>();
-            cups = new List<Cup>();
-            ice = new List<Ice>();
+
         }
 
         // member methods (CAN DO)
-        public void AddLemons(double AmountOfLemonsNeeded)
+        public void AddLemons(int AmountOfLemonsNeeded)
         {
-            for(double i = 0; i < AmountOfLemonsNeeded; i++)
+            for(int i = 0; i < AmountOfLemonsNeeded; i++)
             {
                 Lemon lemon = new Lemon();
                 lemons.Add(lemon);
             }
             Console.WriteLine("You currently have {0} lemons.", lemons.Count);
-            Console.ReadLine();
         }
 
-        public void AddSugar(double AmountOfSugarNeeded)
+        public void AddSugar(int AmountOfSugarNeeded)
         {
-            for (double i = 0; i < AmountOfSugarNeeded; i++)
+            for (int i = 0; i < AmountOfSugarNeeded; i++)
             {
                 Sugar sugar = new Sugar();
                 this.sugar.Add(sugar);
             }
             Console.WriteLine("You currently have {0} cups of sugar.", sugar.Count);
-            Console.ReadLine();
         }
 
-        public void AddCups(double AmountOfCupsNeeded)
+        public void AddCups(int AmountOfCupsNeeded)
         {
-            for (double i = 0; i < AmountOfCupsNeeded; i++)
+            for (int i = 0; i < AmountOfCupsNeeded; i++)
             {
                 Cup cups = new Cup();
                 this.cups.Add(cups);
             }
             Console.WriteLine("You currently have {0} cups.", cups.Count);
-            Console.ReadLine();
         }
 
-        public void AddIce(double AmountOfIceNeeded)
+        public void AddIce(int AmountOfIceNeeded)
         {
-            for (double i = 0; i < AmountOfIceNeeded; i++)
+            for (int i = 0; i < AmountOfIceNeeded; i++)
             {
                 Ice ice = new Ice();
                 this.ice.Add(ice);
             }
             Console.WriteLine("You currently have {0} cups.", ice.Count);
-            Console.ReadLine();
         }
 
-        public void DisplayCurrentInventory()
+        public void DisplayInventory()
         {
             Console.WriteLine("You currently have {0} lemons.", lemons.Count);
             Console.WriteLine("You currently have {0} cups of sugar.", sugar.Count);

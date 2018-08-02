@@ -8,7 +8,8 @@ namespace LemonadeStand
 {
     class Cash
     {
-        public double moneyAvailable = 15.00;
+        public double startingAmount = 25.00;
+        public double moneyAvailable;
         double purchaseItem;
         bool insufficantFunds;
         double cost;
@@ -16,12 +17,12 @@ namespace LemonadeStand
 
         public Cash()
         {
-            
+            moneyAvailable = startingAmount;
         }
 
         public void DisplayCash()
         {
-            Console.WriteLine(moneyAvailable);
+            Console.WriteLine("You currently have $" + moneyAvailable + ".");
         }
 
         public bool CheckIfSufficantFunds(double cost)

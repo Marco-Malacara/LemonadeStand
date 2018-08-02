@@ -8,16 +8,6 @@ namespace LemonadeStand
 {
     class Sugar
     {
-        private double costOfSugar;
-
-        public Sugar()
-        {
-            costOfSugar = .30;
-        }
-
-        public double GetCost()
-        {
-            return costOfSugar;
-        }
+        
     }
 }

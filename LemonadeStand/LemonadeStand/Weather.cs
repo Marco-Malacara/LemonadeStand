@@ -50,7 +50,7 @@ namespace LemonadeStand
 
         public void ForecastTempature()
         {
-            int todaysTempature = 
+             
         }
     }
 }

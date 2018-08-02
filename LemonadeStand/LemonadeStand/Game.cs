@@ -27,7 +27,9 @@ namespace LemonadeStand
 
         public void RunGame()
         {
-            
+            //create customer function
+            UserInterFace.DisplayWelcomeMessage();
+            // start day
         }
 
         public void MakeWeather()
@@ -52,11 +54,15 @@ namespace LemonadeStand
                 case "1":
                     Console.Clear();
                     UserInterFace.DisplayRules();
+                    Console.WriteLine("Press [enter] to return to main menu.");
+                    Console.ReadLine();
+                    Console.Clear();
+                    MainMenu();
                     break;
                 case "2":
                     Console.Clear();
                     day.weather.DisplayTodaysWeather();
-                    day.weather.GenerateForcast();
+                    //day.weather.GenerateForcast();
                     Console.WriteLine("Press [enter] to return to main menu.");
                     Console.ReadLine();
                     Console.Clear();
@@ -71,6 +77,8 @@ namespace LemonadeStand
                     break;
                 case "4":
                     Console.Clear();
+                    player.cash.DisplayCash();
+                    player.inventory.DisplayInventory();
                     store.Restock(player);
                     Console.WriteLine("Press [enter] to return to main menu.");
                     Console.ReadLine();
@@ -79,7 +87,23 @@ namespace LemonadeStand
                     break;
                 case "5":
                     Console.Clear();
-                    player.inventory.DisplayCurrentInventory();
+                    player.inventory.DisplayInventory();
+                    Console.WriteLine("Press [enter] to return to main menu.");
+                    Console.ReadLine();
+                    Console.Clear();
+                    MainMenu();
+                    break;
+                case "6":
+                    // make a recipe function (still in process)
+                    break;
+                case "7":
+                    // create ability to set price of cups
+                    break;
+                default:
+                    Console.WriteLine("That input was not valid please try again!");
+                    MainMenu();
+                    break;
+
             }
         }
         
