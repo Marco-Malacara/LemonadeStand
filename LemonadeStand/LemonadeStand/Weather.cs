@@ -50,7 +50,29 @@ namespace LemonadeStand
 
         public void ForecastTempature()
         {
-             
+             int forecastTempature = random.Next(0, tempatureOfDay.Count);
+            tempature = tempatureOfDay[forecastTempature];
+        }
+
+        public void ForecastCondition()
+        {
+            int forecastCondition = random.Next(0, conditionOfWeather.Count);
+            condition = conditionOfWeather[forecastCondition];
+        }
+
+        public void GenerateForecast()
+        {
+            weatherForcast = new List<string> { "Tomorrow's", "The following day's", "The day after that" };
+            foreach(string t in weatherForcast)
+            {
+                ForecastTempature();
+                ForecastCondition();
+            }
+        }
+
+        public void DisplayForecast()
+        {
+
         }
     }
 }

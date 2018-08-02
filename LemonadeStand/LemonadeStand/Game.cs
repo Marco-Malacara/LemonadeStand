@@ -29,12 +29,15 @@ namespace LemonadeStand
         {
             //create customer function
             UserInterFace.DisplayWelcomeMessage();
+            MakeWeather();
+            MainMenu();
             // start day
         }
 
         public void MakeWeather()
         {
             day.weather.GenerateTodaysWeather();
+            day.weather.GenerateForecast();
         }
 
         public void MainMenu()
@@ -62,7 +65,7 @@ namespace LemonadeStand
                 case "2":
                     Console.Clear();
                     day.weather.DisplayTodaysWeather();
-                    //day.weather.GenerateForcast();
+                    day.weather.DisplayForecast();
                     Console.WriteLine("Press [enter] to return to main menu.");
                     Console.ReadLine();
                     Console.Clear();

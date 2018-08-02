@@ -10,7 +10,7 @@ namespace LemonadeStand
     {
         public double startingAmount = 25.00;
         public double moneyAvailable;
-        double purchaseItem;
+        double remainingMoney;
         bool insufficantFunds;
         double cost;
         Store store = new Store();
@@ -37,9 +37,9 @@ namespace LemonadeStand
 
         public double BuyItem(double cost)
         {
-            purchaseItem = moneyAvailable - cost;
+            remainingMoney = moneyAvailable - cost;
             Console.WriteLine("Your purchase was succesful sending the items to your inventory now!");
-            moneyAvailable = purchaseItem;
+            moneyAvailable = remainingMoney;
             return moneyAvailable;
         }
     }
