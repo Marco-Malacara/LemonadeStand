@@ -97,7 +97,9 @@ namespace LemonadeStand
                     MainMenu();
                     break;
                 case "6":
-                    // make a recipe function (still in process)
+                    Console.Clear();
+                    player.inventory.DisplayInventory();
+                    player.recipe.ChooseRecipe();
                     break;
                 case "7":
                     // create ability to set price of cups

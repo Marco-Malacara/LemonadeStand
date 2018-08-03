@@ -70,7 +70,6 @@ namespace LemonadeStand
                 ForecastTempature();
                 ForecastCondition();
                 Console.WriteLine(t + "forcast is: {0} {1}", tempatureForecast, conditionForecast);
-
             }
         }
     }

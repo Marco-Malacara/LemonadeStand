@@ -10,11 +10,13 @@ namespace LemonadeStand
     {
         public Inventory inventory;
         public Cash cash;
+        public Recipe recipe;
 
     public Player()
         {
             inventory = new Inventory();
             cash = new Cash();
+            recipe = new Recipe();
         }
     }
 }
