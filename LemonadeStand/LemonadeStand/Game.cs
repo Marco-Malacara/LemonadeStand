@@ -100,7 +100,6 @@ namespace LemonadeStand
                     Console.Clear();
                     player.inventory.DisplayInventory();
                     player.recipe.ChooseRecipe();
-                    Console.ReadLine();
                     break;
                 case "7":
                     // create ability to set price of cups

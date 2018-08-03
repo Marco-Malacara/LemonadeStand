@@ -13,6 +13,7 @@ namespace LemonadeStand
         int sugarForRecipe;
         int cupsForRecipe;
         int iceForRecipe;
+        int removeLemons;
 
         public Recipe()
         {
@@ -90,6 +91,12 @@ namespace LemonadeStand
         public void DisplayRecipe()
         {
             Console.WriteLine("You've decided to go with {0} lemons, {1} sugar, {2} ice cubes each pitcher makes {3} cups!", lemonsForRecipe, sugarForRecipe, iceForRecipe, cupsForRecipe);
+        }
+
+        public int RemoveLemonsFromInventory()
+        {
+            removeLemons = numberOfPitchers * lemonsForRecipe;
+            return removeLemons;
         }
     }
 }

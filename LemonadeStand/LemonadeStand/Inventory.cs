@@ -30,6 +30,15 @@ namespace LemonadeStand
             Console.WriteLine("You currently have {0} lemons.", lemons.Count);
         }
 
+        public void UseLemons(Player player)
+        {
+            int lemonsToRemove = player.recipe.RemoveLemonsFromInventory();
+            for (int i = 0; i < lemonsToRemove; i++)
+            {
+                lemons.RemoveAt(0);
+            }
+        }
+
         public void AddSugar(int AmountOfSugarNeeded)
         {
             for (int i = 0; i < AmountOfSugarNeeded; i++)
