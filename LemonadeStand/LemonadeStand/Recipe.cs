@@ -25,13 +25,14 @@ namespace LemonadeStand
         public void ChooseRecipe()
         {
             Console.WriteLine("The standard recipe for lemonade is 4 lemons, 4 cups of sugar, and 4 icecubes");
-            Console.WriteLine("Press [1] to use the standard recipe other wise, Press [1] to make your own recipe!");
+            Console.WriteLine("Press [1] to use the standard recipe other wise, Press [2] to make your own recipe!");
             string userInput = Console.ReadLine();
 
             switch (userInput)
             {
                 case "1":
                     NumberOfPitchersToBeMade();
+                    DisplayRecipe();
                     break;
                 case "2":
                     CustomLemons();
@@ -92,3 +93,4 @@ namespace LemonadeStand
         }
     }
 }
+    
