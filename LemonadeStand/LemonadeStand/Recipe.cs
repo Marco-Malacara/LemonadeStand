@@ -88,7 +88,7 @@ namespace LemonadeStand
 
         public void DisplayRecipe()
         {
-            Console.WriteLine("You've decided to go with {0} lemons, {1} sugar, {2} ice cubes each pitcher makes {3] cups!", lemonsForRecipe, sugarForRecipe, iceForRecipe, cupsForRecipe);
+            Console.WriteLine("You've decided to go with {0} lemons, {1} sugar, {2} ice cubes each pitcher makes {3} cups!", lemonsForRecipe, sugarForRecipe, iceForRecipe, cupsForRecipe);
         }
     }
 }
