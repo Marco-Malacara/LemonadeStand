@@ -13,6 +13,8 @@ namespace LemonadeStand
         private List<string> weatherForcast;
         public string condition;
         public int tempature;
+        public string conditionForecast;
+        public int tempatureForecast;
         Random random = new Random();
 
         public Weather()
@@ -51,13 +53,13 @@ namespace LemonadeStand
         public void ForecastTempature()
         {
              int forecastTempature = random.Next(0, tempatureOfDay.Count);
-            tempature = tempatureOfDay[forecastTempature];
+            tempatureForecast = tempatureOfDay[forecastTempature];
         }
 
         public void ForecastCondition()
         {
             int forecastCondition = random.Next(0, conditionOfWeather.Count);
-            condition = conditionOfWeather[forecastCondition];
+            conditionForecast = conditionOfWeather[forecastCondition];
         }
 
         public void GenerateForecast()
@@ -67,12 +69,9 @@ namespace LemonadeStand
             {
                 ForecastTempature();
                 ForecastCondition();
+                Console.WriteLine(t + "forcast is: {0} {1}", tempatureForecast, conditionForecast);
+
             }
-        }
-
-        public void DisplayForecast()
-        {
-
         }
     }
 }

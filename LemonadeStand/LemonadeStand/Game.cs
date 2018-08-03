@@ -65,7 +65,7 @@ namespace LemonadeStand
                 case "2":
                     Console.Clear();
                     day.weather.DisplayTodaysWeather();
-                    day.weather.DisplayForecast();
+                    day.weather.GenerateForecast();
                     Console.WriteLine("Press [enter] to return to main menu.");
                     Console.ReadLine();
                     Console.Clear();
